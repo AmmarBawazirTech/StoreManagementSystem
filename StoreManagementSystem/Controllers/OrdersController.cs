@@ -26,6 +26,7 @@ namespace StoreManagementSystem.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(OrderViewModel model)
         {
+            //see the best approach and contact me
             if (ModelState.IsValid)
             {
                 try
