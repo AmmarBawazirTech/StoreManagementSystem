@@ -1,0 +1,51 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: '@TempData["SuccessMessage"]',
+            timer: 3000,
+            showConfirmButton: false
+        });
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Error!',
+            text: '@TempData["ErrorMessage"]',
+            timer: 5000,
+            showConfirmButton: true
+        });
+    </script>
+}
+
+@if (TempData["WarningMessage"] != null)
+{
+    <script>
+        Swal.fire({
+            icon: 'warning',
+            title: 'Warning!',
+            text: '@TempData["WarningMessage"]',
+            timer: 4000,
+            showConfirmButton: true
+        });
+    </script>
+}
+
+@if (TempData["InfoMessage"] != null)
+{
+    <script>
+        Swal.fire({
+            icon: 'info',
+            title: 'Info',
+            text: '@TempData["InfoMessage"]',
+            timer: 3000,
+            showConfirmButton: false
+        });
+    </script>
+}
